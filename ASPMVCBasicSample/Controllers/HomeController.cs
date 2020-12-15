@@ -11,7 +11,20 @@ namespace ASPMVCBasicSample.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            ViewBag.Address = new SelectList(GenderList());
             return View();
+        }
+
+        public List<string> GenderList()
+        {
+            return new List<string>()
+            {
+                "Phnom Penh",
+                "Kampungchang",
+                "Pursat",
+                "Battambong",
+                "Banteaymeanchey"
+            };
         }
     }
 }

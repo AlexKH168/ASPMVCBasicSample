@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "FormPureHTML";
+}
+
+<h2>Register</h2>
+
+<div>
+    <form action="/Account/Register" , method="post">
+        <div>
+            First Name: <input type="text" id="firstName" name="FirstName" placeholder="input your surename" />
+        </div>
+        <div>
+            Last Name: <input type="text" id="lastName" name="LastName" placeholder="input your name" />
+        </div>
+        <div>
+            Gender: Male <input type="radio" id="male" name="Gender" value="Male" /> Female <input type="radio" id="female" name="Gender" value="Female" />
+        </div>
+        <div>
+            Address: <select name="address">
+                        <option>Phnom Penh</option>
+                        <option>Kampungchnang</option>
+                        <option>Pursat</option>
+                        <option>Battambong</option>
+                        <option>Banteaymeanchey</option>
+                     </select>
+        </div>
+        <div>
+            Phone: <input type="text" id="phone" name="Phone" placeholder="input your phone" />
+        </div>
+        <div>
+            Email: <input type="email" id="email" name="Email" placeholder="input your email" />
+        </div>
+        <div>
+            Password: <input type="password" id="password" name="Password" placeholder="create your password" />
+        </div>
+        <div>
+            Confirm Password: <input type="password" id="confirmPassword" name="ConfirmPassword" placeholder="type your password again" />
+        </div>
+        <div>
+            Security: <input type="checkbox" id="security" name="Security" value="Home" />Home
+                      <input type="checkbox" id="security" name="Security" value="School" />School
+                      <input type="checkbox" id="security" name="Security" value="Work" />Work
+                      <input type="checkbox" id="security" name="Security" value="Market" />Market
+        </div>
+        <div>
+            Question: <strong>What your favorite movie?</strong>
+        </div>
+        <div>
+            <textarea rows="5", cols="50" placeholder="your answer here..."></textarea>
+        </div>
+        <div>
+            <input type="submit" value="SUBMIT" />
+        </div>
+    </form>
+</div>

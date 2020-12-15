@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "LooselyHTML";
+}
+
+<h2>Register</h2>
+<div>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <div>
+            @Html.Label("First Name")
+            @Html.TextBox("firstName")
+        </div>
+        <div>
+            @Html.Label("Last Name")
+            @Html.TextBox("lastName")
+        </div>
+        <div>
+            @Html.Label("Gender")
+            @Html.RadioButton("gender", "Male")Male
+            @Html.RadioButton("gender", "Female")Female
+        </div>
+        <div>
+            @Html.Label("Address")
+            @Html.DropDownList("address", "--Select Address--")
+        </div>
+        <div>
+            @Html.Label("Phone")
+            @Html.TextBox("phone")
+        </div>
+        <div>
+            @Html.Label("Email")
+            @Html.TextBox("email")
+        </div>
+        <div>
+            @Html.Label("Password")
+            @Html.Password("password")
+        </div>
+        <div>
+            @Html.Label("Confirm Password")
+            @Html.Password("confirmPassword")
+        </div>
+        <div>
+            @Html.Label("Security")
+            @Html.CheckBox("security")Home
+            @Html.CheckBox("security")School
+            @Html.CheckBox("security")Work
+            @Html.CheckBox("security")Market
+        </div>
+        <div>
+            @Html.Label("Question: What your favorite movies?")<br />
+            @Html.TextArea("question", "", 5, 50, new { })
+        </div>
+        <div>
+            <button type="submit">SUBMIT</button>
+        </div>
+    }
+</div>
+
