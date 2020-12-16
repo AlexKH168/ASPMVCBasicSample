@@ -1,0 +1,55 @@
+﻿@model ASPMVCBasicSample.Models.Product
+@{
+    ViewBag.Title = "Strongly HTML";
+}
+
+<h2>Create Product</h2>
+<div>
+    @using (Html.BeginForm("Create", "Home", FormMethod.Post))
+    {
+        <div>
+            @Html.LabelFor(m => m.ID)
+            @Html.TextBoxFor(m => m.ID)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Name)
+            @Html.TextBoxFor(m => m.Name)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Price)
+            @Html.TextBoxFor(m => m.Price)
+        </div>
+        <div>
+            @Html.LabelFor(m => m.CategoryName)
+            @Html.DropDownListFor(m => m.CategoryName,ViewBag.CategoryList as SelectList,"--Select Category--")
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Description)
+            @Html.TextAreaFor(m => m.Description)
+        </div>
+        <div>
+            <input type="submit" value="CREATE" />
+        </div>
+    }
+</div>
+
+<div>
+    @if(Model != null)
+    {
+        <div>
+            ID: @Model.ID
+        </div>
+        <div>
+            Name: @Model.Name
+        </div>
+        <div>
+            Price: @Model.Price
+        </div>
+        <div>
+            CategoryName: @Model.CategoryName
+        </div>
+        <div>
+            Description: @Model.Description
+        </div>
+    }
+</div>
